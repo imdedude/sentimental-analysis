@@ -1,0 +1,20 @@
+openapi: 3.0.0
+info:
+  title: "RP Flask REST API"
+  description: "An API about people and notes"
+  version: "1.0.0"
+
+servers:
+  - url: "http://127.0.0.1:5000"
+    description: "Local development server"
+
+paths:
+  /:
+    get:
+      operationId: "views/simpleGet/simple_view"
+      tags:
+        - "People"
+      summary: "Read the list of people"
+      responses:
+        "200":
+          description: "Successfully read people list"
